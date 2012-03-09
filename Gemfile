@@ -3,6 +3,7 @@ source "http://ruby.taobao.org"
 
 gem "rails", "3.1.4"
 gem "sqlite3"
+gem "pg"
 gem "pd"
 gem "optimism"
 gem "formtastic"

@@ -278,7 +278,7 @@ DEPENDENCIES
   rails (= 3.1.4)
   rails-i18n
   sass-rails (~> 3.1.5)
-  spree
+  spree (~> 1.0.0)
   spree_contact_us!
   spree_editor!
   spree_essential_cms!

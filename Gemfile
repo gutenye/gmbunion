@@ -10,7 +10,7 @@ gem "rails-i18n"
 gem "jquery-rails"
 gem "sass-rails",   "~> 3.1.5" # for heroku
 
-gem "spree"
+gem "spree", "~> 1.0.0"
 gem "spree_usa_epay"
 gem "spree_skrill"
 gem "spree_contact_us", :path => "vendor/spree_contact_us"
@@ -34,6 +34,10 @@ end
 
 group :development do
   gem "sqlite3"
+end
+
+group :production do
+  gem "thin"
 end
 
 # To use ActiveModel has_secure_password

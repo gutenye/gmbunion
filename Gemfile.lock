@@ -30,7 +30,7 @@ PATH
       spree_core (>= 0.70.RC1)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.1.4)
       actionpack (= 3.1.4)

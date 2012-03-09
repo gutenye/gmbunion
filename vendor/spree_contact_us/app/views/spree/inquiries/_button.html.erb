@@ -1,0 +1,5 @@
+<div id="product_inquiry">
+  <%= link_to new_inquiry_path(:product_id => @product.id, :refer_url => request.url  ) do %>
+    <%= image_tag "product_inquiry.gif" %>
+  <% end %>
+</div>

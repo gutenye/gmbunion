@@ -1,0 +1,14 @@
+<div id="chat_slider" >
+  <div class="contacts">
+    <ul>
+    <% Rc.contacts.each do |name, email| %>
+      <li>
+        <a href="msnim:chat?contact=<%=email%>">
+          <img width="35" height="35" src="/assets/msn.gif" alt="">
+          <%=name%>
+        </a>
+      </li>
+    <% end %>
+    <ul>
+  </div>
+</div>

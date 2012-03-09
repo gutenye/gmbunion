@@ -1,0 +1,11 @@
+<% @product = @inquiry.product %>
+
+<p><%= t(:header) %></p>
+<p><%= t(:from) %>: <%= @inquiry.name %> (<%= @inquiry.from %>)</p>
+<p>Product Name: <%=@product.name%></p>
+<p>Refer URL: <%=@inquiry.refer_url%></p>
+<p>Quantity Required: <%=@inquiry.quantity_required%></p>
+<br/>
+
+<%= t(:message) %>:<br/>
+<p><%= @inquiry.message %></p>

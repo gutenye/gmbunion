@@ -1,0 +1,46 @@
+<% @product = @inquiry.product %>
+
+<% content_for :page_title do %>
+  <%= @site_page.page_title rescue '' %>
+<% end %>
+
+<div class="contact_form">
+  <h6 class="product-section-title">Product Inquiry</h6> 
+
+  <% refer_img = @product.images.empty? ? "/noimage/product.png" : @product.images.first.attachment.url %>
+  <%= semantic_form_for @inquiry do |f| %>
+
+    <%= f.text_field :product_id, :value => @product.id, :hidden => true %>
+    <%= f.text_field :refer_url, :value => params["refer_url"], :hidden => true %>
+    <%= f.text_field :captcha_secret, :hidden => true %>
+
+    <%= f.inputs do %>
+      <%= f.input :name, :required => true %>
+      <%= f.input :from, :as => :email, :required => true, :hint => t(:type_real_mail) %>
+
+      <li id="inquiry_from_input" class="string input optional stringish">
+        <%= f.label :to, "To", :class => "label" %>
+        <%= f.text_field :to, :size => nil, :readonly => true %>
+        <div class="inline_block">
+          <ol>
+            <li>
+              <%= link_to @product.name, params["refer_url"], :id => "refer_url" %>
+            </li>
+            <li>
+            <%= image_tag refer_img, :id => "refer_img" %>
+            </li>
+          </ol>
+        </div>
+      </li>
+
+      <%= f.input :subject, :required => true %>
+      <%= f.input :quantity_required, :hint => "e.g. 10,000/pcs" %>
+      <%= f.input :message, :required => true %>
+      <%= f.input :captcha_solution, :required => true, :label => "What is #{@inquiry.captcha.task} = ?", :hint => "We need to make sure you're human!"%>
+    <% end %>
+
+    <%= f.buttons do %>
+      <%= f.commit_button :label => "Send" %>
+    <% end %>
+  <% end %>
+</div>

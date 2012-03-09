@@ -8,6 +8,7 @@ gem "optimism"
 gem "formtastic"
 gem "rails-i18n"
 gem "jquery-rails"
+gem "sass-rails",   "~> 3.1.5" # for heroku
 
 gem "spree"
 gem "spree_usa_epay"
@@ -23,7 +24,6 @@ gem "spree_essential_cms", :git => "https://github.com/citrus/spree_essential_cm
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem "sass-rails",   "~> 3.1.5"
   gem "coffee-rails", "~> 3.1.1"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

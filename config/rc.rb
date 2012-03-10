@@ -2,8 +2,8 @@ i:
   name = "Ray Zong"
   company = "General Merchandise Buy Union Co.,Ltd."
 
-contacts = [
-  [ "foo", "foo@hotmail.com"],
-  [ "bar", "bar@hotmail.com"],
-  [ "baz", "baz@hotmail.com"]
-]
+contacts = {
+  "Mary Margaret" => {msn: "foo@hotmail.com", skype: "foo"},
+  "Emma Swan" => {msn: "bar@hotmail.com", skype: "bar"},
+  "Regina Mills" => {msn: "baz@hotmail.com", skype: "baz"},
+}

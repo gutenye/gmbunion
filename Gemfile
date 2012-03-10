@@ -33,7 +33,6 @@ group :assets do
 end
 
 group :development do
-  gem "thin"
   gem "sqlite3"
 end
 

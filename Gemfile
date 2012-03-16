@@ -17,7 +17,6 @@ gem "spree_contact_us", :path => "vendor/spree_contact_us"
 gem "spree_i18n", :git => "git://github.com/spree/spree_i18n.git"
 gem "spree_editor", :git => "git://github.com/GutenYe/spree_editor.git", :branch => "gemspec"
   gem "tinymce-rails"
-
 gem "spree_essentials", "~> 0.4.0.rc3"
 gem "spree_essential_cms", :git => "https://github.com/citrus/spree_essential_cms.git"
 
@@ -38,6 +37,7 @@ end
 
 group :production do
   gem "thin"
+  gem "spree_heroku", :git => "git://raw.github.com/joneslee85/spree-heroku.git", :branch => "1-0-stable" 
 end
 
 # To use ActiveModel has_secure_password
